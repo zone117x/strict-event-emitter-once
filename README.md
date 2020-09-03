@@ -1,0 +1,1 @@
+# strict-event-emitter-once
