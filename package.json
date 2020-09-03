@@ -1,0 +1,69 @@
+{
+  "name": "strict-event-emitter-once",
+  "main": "dist/index.js",
+  "description": "Promise based `once` for strict-event-emitter",
+  "version": "0.0.1",
+  "homepage": "https://github.com/zone117x/strict-event-emitter-once",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:zone117x/strict-event-emitter-once.git"
+  },
+  "scripts": {
+    "prepublishOnly": "npm run lint && npm run test && npm run build",
+    "build": "tsc",
+    "lint": "eslint . --ext .ts -f unix",
+    "test": "jest --coverage --no-cache"
+  },
+  "dependencies": {
+    "strict-event-emitter-types": "^2.0.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.13",
+    "@types/node": "^8.10.63",
+    "@typescript-eslint/eslint-plugin": "^4.0.1",
+    "@typescript-eslint/parser": "^4.0.1",
+    "@ungap/event-target": "^0.2.2",
+    "eslint": "^7.8.1",
+    "eventemitter2": "^6.4.3",
+    "eventemitter3": "^4.0.7",
+    "jest": "^26.4.2",
+    "jsdom": "^16.4.0",
+    "ts-jest": "^26.3.0",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.2"
+  },
+  "files": [
+    "index.ts",
+    "dist"
+  ],
+  "author": "Matthew Little",
+  "license": "MIT",
+  "keywords": [
+    "strict-event-emitter",
+    "strict-event-emitter-types",
+    "typed-emitter",
+    "once",
+    "eventemitter",
+    "events"
+  ],
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "testMatch": [
+      "**/?(*.)test.ts"
+    ]
+  },
+  "release": {
+    "branches": [
+      "master"
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/npm",
+      "@semantic-release/github",
+      "@semantic-release/changelog",
+      "@semantic-release/git"
+    ]
+  }
+}
