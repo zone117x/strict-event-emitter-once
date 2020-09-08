@@ -2,7 +2,7 @@
   "name": "strict-event-emitter-once",
   "main": "dist/index.js",
   "description": "Promise based `once` for strict-event-emitter",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "homepage": "https://github.com/zone117x/strict-event-emitter-once",
   "repository": {
     "type": "git",
